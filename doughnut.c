@@ -45,7 +45,7 @@ int main(){
 
     for (int phi = 0; phi < 360; phi++){
       phir = phi * M_PI / 180.0;
-      for (int theta = 0; theta < 360; theta++){ // theta += 6 gives similar result for current dimensions of 40 and 80
+      for (int theta = 0; theta < 360; theta++){ 
         thr = theta * M_PI / 180.0;
         x = (R + r*cos(thr)) * cos(phir);
         y = (R + r*cos(thr)) * sin(phir);
@@ -76,7 +76,7 @@ int main(){
         }
       }
     }
-    print_tor(torus, rows, cols);
+    print_tor(torus, rows, cols); // Fix the array formatting to use a single printf("%s", torus) instead of a print function
     printf("\033[%dA\r", rows);
     fflush(stdout);
     A += 1.2;
